@@ -64,3 +64,4 @@ typings/
 platforms/*
 plugins/*
 .cordova/*
+package-lock.json

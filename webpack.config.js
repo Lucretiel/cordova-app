@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const dir = local => path.resolve(__dirname, local)
 const isProd = process.env.NODE_ENV === 'production'
 
+console.log(dir("node_modules"))
 
 module.exports = {
 	context: dir("src"),
@@ -31,4 +32,5 @@ module.exports = {
 			}]
 		}],
 	},
+	devtool: false
 }
