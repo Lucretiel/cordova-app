@@ -15,15 +15,19 @@ Rx.fromEvent(document, 'deviceready').pipe(
 })
 */
 
-import {fromEvent} from 'rxjs'
+import { fromEvent } from 'rxjs'
+import { map, delay, take } from 'rxjs/operators'
 
-fromEvent(document, 'deviceready').subscribe(() => {
-        var parentElement = document.getElementById('deviceready');
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+fromEvent(document, 'deviceready').pipe(
+    delay(5000),
+    take(1),
+    map(() => document.getElementById('deviceready'))
+).subscribe(parentElement => {
+    var listeningElement = parentElement.querySelector('.listening');
+    var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+    listeningElement.setAttribute('style', 'display:none;');
+    receivedElement.setAttribute('style', 'display:block;');
 
-        console.log("BAMBAM")
-    })
+    console.log("BAMBAM")
+})
