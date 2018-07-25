@@ -65,3 +65,6 @@ platforms/*
 plugins/*
 .cordova/*
 package-lock.json
+
+# Sublime
+*.sublime-workspace
