@@ -5,7 +5,15 @@ const ops = require('rxjs/operators')
 const { spawn } = require('child_process')
 
 module.exports = context => {
-	const isRelease = context.opts.options.release || false;
+	// Javascript is definitely my favorite langugage ;_;
+	const isRelease = (
+		context &&
+		context.opts &&
+		context.opts.options &&
+		context.opts.options.release ||
+		false
+	);
+
 	const webpackMode = isRelease ? "production" : "development";
 
 	const webpackChild = spawn('npx', ['webpack', '--mode', webpackMode], {
