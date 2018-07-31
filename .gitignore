@@ -71,6 +71,7 @@ package-lock.json
 
 # Firebase
 google-services.json
+GoogleService-Info.plist
 
 # Webpack
 /www/js/bundle.js

@@ -24,7 +24,7 @@
     </platform>
     <hook src="scripts/build-webpack.js" type="before_prepare" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
-    <plugin name="cordova-plugin-firebase-analytics" spec="/Users/nathanwest/Documents/cordova-plugin-firebase-analytics" />
+    <plugin name="cordova-plugin-firebase-analytics" spec="https://github.com/Lucretiel/cordova-plugin-firebase-analytics.git" />
     <engine name="ios" spec="^4.5.5" />
     <engine name="android" spec="^7.1.1" />
 </widget>

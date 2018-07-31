@@ -18,7 +18,9 @@ Rx.fromEvent(document, 'deviceready').pipe(
 import { fromEvent } from 'rxjs'
 import { map, delay, take } from 'rxjs/operators'
 
-fromEvent(document, 'deviceready').pipe(
+const deviceReady = fromEvent(document, 'deviceready');
+
+deviceReady.pipe(
     delay(5000),
     take(1),
     map(() => document.getElementById('deviceready'))
@@ -29,5 +31,5 @@ fromEvent(document, 'deviceready').pipe(
     listeningElement.setAttribute('style', 'display:none;');
     receivedElement.setAttribute('style', 'display:block;');
 
-    console.log("BAMBAM")
+    cordova.plugins.firebase.analytics.logEvent("test_event", {param: "value"});
 })
