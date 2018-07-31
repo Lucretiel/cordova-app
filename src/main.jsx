@@ -25,6 +25,8 @@ deviceReady.pipe(
     take(1),
     map(() => document.getElementById('deviceready'))
 ).subscribe(parentElement => {
+    const buttonClick = fromEvent(document.getElementById("test"), 'click');
+
     var listeningElement = parentElement.querySelector('.listening');
     var receivedElement = parentElement.querySelector('.received');
 
@@ -32,4 +34,10 @@ deviceReady.pipe(
     receivedElement.setAttribute('style', 'display:block;');
 
     cordova.plugins.firebase.analytics.logEvent("test_event", {param: "value"});
+
+    let count = 0
+    buttonClick.subscribe(() => {
+        count += 1;
+        cordova.plugins.firebase.analytics.logEvent("click", {param: count});
+    })
 })
