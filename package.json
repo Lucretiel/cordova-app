@@ -27,6 +27,7 @@
 		"cordova-ios": "^4.5.5",
 		"cordova-plugin-whitelist": "^1.3.3",
 		"cordova-support-android-plugin": "^1.0.1",
+		"firebase-analytics-cordova": "git+https://github.com/googleanalytics/firebase-analytics-cordova.git",
 		"html-webpack-plugin": "^3.2.0",
 		"lodash": "^4.17.10",
 		"react": "^16.4.1",
@@ -45,6 +46,7 @@
 		],
 		"plugins": {
 			"cordova-plugin-whitelist": {},
+			"firebase-analytics-cordova": {}
 		}
 	}
 }
