@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Lucretiel/cordova-app/issues"
   },
-  "homepage": "https://github.com/Lucretiel/cordova-app#readme"
+  "homepage": "https://github.com/Lucretiel/cordova-app#readme",
+  "dependencies": {
+    "cordova": "^8.0.0",
+    "plugman": "^2.0.0"
+  }
 }
