@@ -40,6 +40,10 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+
+        if(cordova.plugins.gtagSupport.gtag_present) {
+            parentElement.querySelector('.gtag').innerHTML = "gtag is ready!"
+        }
     }
 };
 
