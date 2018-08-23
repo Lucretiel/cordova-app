@@ -1,5 +1,6 @@
 {
-  "name": "cordova-app",
+  "name": "org.lucretiel.cordovaapp",
+  "displayName": "CordovaApp",
   "version": "1.0.0",
   "description": "A simple app to demo the gtag thing",
   "main": "index.js",
